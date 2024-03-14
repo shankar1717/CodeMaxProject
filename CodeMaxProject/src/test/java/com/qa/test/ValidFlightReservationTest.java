@@ -1,14 +1,19 @@
 package com.qa.test;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
+
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-
 import com.qa.pages.FlightPage;
 
 public class ValidFlightReservationTest extends BaseClass {
@@ -66,7 +71,8 @@ public class ValidFlightReservationTest extends BaseClass {
 		WebElement countryElement = driver.findElement(By.xpath("//select[@id='Country']"));
 		s = new Select(countryElement);
 		s.selectByVisibleText(countryValue);
-
+		screenshot("Personal Details Page");
+		
 		// Next button
 		Thread.sleep(3000);
 		WebElement nextButton = driver.findElement(By.xpath("//*[@id='renderButton']"));
@@ -133,7 +139,8 @@ public class ValidFlightReservationTest extends BaseClass {
 		WebElement currency = driver.findElement(By.xpath("//select[@id='currency']"));
 		s = new Select(currency);
 		s.selectByVisibleText(Currency);
-
+		
+		screenshot("Flight Details Page");
 		System.out.println("---------------Flight Details Entered---------------------");
 		Thread.sleep(3000);
 
@@ -144,6 +151,7 @@ public class ValidFlightReservationTest extends BaseClass {
 		js.executeScript("arguments[0].click();", Submitbutton);
 		Thread.sleep(3000);
 		// Submitbutton.click();
+
 		System.out.println("---------------Flight Details Submitted Suceess------------------");
 	}
 	// ====================================================================
@@ -296,7 +304,7 @@ public class ValidFlightReservationTest extends BaseClass {
 		String currencyelement = amountParts[1].trim(); // Get the currency
 		// System.out.println("amountelement:" + amountelement);
 		// System.out.println("currencyelement:" + currencyelement);
-
+		screenshot("Confirmation Page");
 		// Assert.assertEquals(label, expectedLabel, "Label assertion failed");
 		Assert.assertEquals(amountelement, Amount.replaceAll("\\s+", ""), "Amount assertion failed");
 		Assert.assertEquals(currencyelement, Currency, "Currency assertion failed");
@@ -304,6 +312,37 @@ public class ValidFlightReservationTest extends BaseClass {
 		System.out.println("-------Following Failures are Expected As I have Found Bug in the Application------------------ ");
 		// After all assertions, call assertAll() to verify all assertions
 		sa.assertAll();
+	}
+	
+		private void screenshot(String scrrenshotName) {
+        // Get the driver from the Baseclass
+        //WebDriver driver = getDriver();
+
+        // TakesScreenshot is an interface of Selenium that captures the screenshot
+        TakesScreenshot ts = (TakesScreenshot) driver;
+
+        // Call getScreenshotAs method to create an image file
+        File source = ts.getScreenshotAs(OutputType.FILE);
+
+        // Define the path where you want to save the screenshot
+        String screenshotPath = System.getProperty("user.dir") + "/screenshots/" + scrrenshotName +  ".png";
+
+        // Create a destination file
+        File destination = new File(screenshotPath);
+
+        try {
+            // Use FileUtils.copyFile method to save the screenshot at the desired location
+            FileUtils.copyFile(source, destination);
+            System.out.println("Screenshot captured: " + scrrenshotName);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        //System.out.println("Screenshot taken at: " + screenshotPath);
+    }
+
+
+
+
+
 
 	}
-}

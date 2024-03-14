@@ -1,8 +1,13 @@
 package com.qa.test;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.List;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
@@ -73,12 +78,14 @@ public class EmptyFieldsTest extends BaseClass {
 		depDate.sendKeys("13032024");
 
 		// return Date
-		//WebElement returnDate = driver.findElement(By.xpath("//input[@name='return_date']"));
-		//returnDate.sendKeys("15032024");
+		// WebElement returnDate =
+		// driver.findElement(By.xpath("//input[@name='return_date']"));
+		// returnDate.sendKeys("15032024");
 
 		// dep City
-		//WebElement depCity = driver.findElement(By.xpath("//input[@name='departure_city']"));
-		//depCity.sendKeys("Chennai");
+		// WebElement depCity =
+		// driver.findElement(By.xpath("//input[@name='departure_city']"));
+		// depCity.sendKeys("Chennai");
 
 		// dep Country
 		WebElement depCountry = driver.findElement(By.xpath("//select[@name='departure_country']"));
@@ -110,7 +117,7 @@ public class EmptyFieldsTest extends BaseClass {
 
 		// Specify the file path
 		String filePath = System.getProperty("user.dir") + "//excel//man-.jpg";
-		//String filePath = "C:\\Users\\shankar\\Desktop";
+		// String filePath = "C:\\Users\\shankar\\Desktop";
 
 		// Send the file path to the file input element
 		fileInput.sendKeys(filePath);
@@ -135,16 +142,42 @@ public class EmptyFieldsTest extends BaseClass {
 		a.moveToElement(Submitbutton).build().perform();
 
 		Submitbutton.click();
-	
-	
+
 		System.out.println("------------------------------------------------");
 		List<WebElement> errorMessage1 = driver.findElements(By.xpath("//label[@class='error']"));
 		for (WebElement errorelement : errorMessage1) {
 			System.out.println("Error Message : " + errorelement.getText());
 			Assert.assertTrue(errorelement.isDisplayed(), "Error message not displayed for empty Fields");
 			System.out.println("---------------------------------------------");
-		}
 
+		}
+		screenshot("EmptyFields-ErrorMeaage");
+	}
+
+	private void screenshot(String scrrenshotName) {
+		// Get the driver from the Baseclass
+		// WebDriver driver = getDriver();
+
+		// TakesScreenshot is an interface of Selenium that captures the screenshot
+		TakesScreenshot ts = (TakesScreenshot) driver;
+
+		// Call getScreenshotAs method to create an image file
+		File source = ts.getScreenshotAs(OutputType.FILE);
+
+		// Define the path where you want to save the screenshot
+		String screenshotPath = System.getProperty("user.dir") + "/screenshots/" + scrrenshotName + ".png";
+
+		// Create a destination file
+		File destination = new File(screenshotPath);
+
+		try {
+			// Use FileUtils.copyFile method to save the screenshot at the desired location
+			FileUtils.copyFile(source, destination);
+			System.out.println("Screenshot captured: " + scrrenshotName);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		// System.out.println("Screenshot taken at: " + screenshotPath);
 	}
 
 }

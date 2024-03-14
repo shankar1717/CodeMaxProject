@@ -15,7 +15,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class BaseClass {
 	public WebDriver driver;
-	WebDriverWait wait;
+	public WebDriverWait wait;
 	public Select s;
 	// ---------Data From Excel Sheet Personal Details---------------
 	public String salutationValue;
