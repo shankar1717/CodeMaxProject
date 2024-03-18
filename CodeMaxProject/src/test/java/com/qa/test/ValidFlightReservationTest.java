@@ -2,6 +2,7 @@ package com.qa.test;
 
 import java.io.File;
 import java.io.IOException;
+import java.time.Duration;
 import java.util.List;
 
 import org.apache.commons.io.FileUtils;
@@ -10,26 +11,24 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
+
+import com.qa.pages.Common;
 import com.qa.pages.FlightPage;
 
 public class ValidFlightReservationTest extends BaseClass {
 	Select s;
 	SoftAssert sa;
-
+	Common c =new Common(driver);
 	@Test(priority = 0)
 	public void personalDetails() throws Exception {
-		// // Salutation
-		// WebElement salutation = driver.findElement(By.xpath("//select[@name='salutation']"));
-		// s = new Select(salutation);
-		// s.selectByVisibleText(salutationValue);
-		// // FirstName
-		// WebElement firstName =driver.findElement(By.xpath("//input[@id='firstname']"));
-		// firstName.sendKeys(firstNameValue);
-
+	
+		log.info("Website Launched");
 		FlightPage flightpage = new FlightPage(driver);
 		//Saluation and FirstName
 		flightpage.selectSalutation(salutationValue);
@@ -77,11 +76,13 @@ public class ValidFlightReservationTest extends BaseClass {
 		Thread.sleep(3000);
 		WebElement nextButton = driver.findElement(By.xpath("//*[@id='renderButton']"));
 		nextButton.click();
-
-		System.out.println("---------------Personal Details Entered-------------------");
+		log.info("Personal details entered successfully.");
 	}
 	@Test(priority = 1)
 	public void flightDetails() throws Exception {
+		
+		log.info("User Navigates to Flight Details Page");
+		
 		// Dep Date
 		WebElement depDate = driver.findElement(By.xpath("//input[@name='departure_date']"));
 		depDate.sendKeys("13032024");
@@ -96,8 +97,9 @@ public class ValidFlightReservationTest extends BaseClass {
 
 		// dep Country
 		WebElement depCountry = driver.findElement(By.xpath("//select[@name='departure_country']"));
-		s = new Select(depCountry);
-		s.selectByVisibleText(DepartureCountry);
+//		s = new Select(depCountry);
+//		s.selectByVisibleText(DepartureCountry);
+		c.selectDropdownVisibleText(depCountry, DepartureCountry);
 
 		// destination City
 		WebElement desCity = driver.findElement(By.xpath("//input[@name='destination_city']"));
@@ -105,8 +107,10 @@ public class ValidFlightReservationTest extends BaseClass {
 
 		// Destination Country
 		WebElement desCountry = driver.findElement(By.xpath("//select[@name='destination_country']"));
-		s = new Select(desCountry);
-		s.selectByVisibleText(DestinationCountry);
+		//s = new Select(desCountry);
+		//s.selectByVisibleText(DestinationCountry);
+		c.selectDropdownVisibleText(desCountry, DestinationCountry);
+		
 
 		// Booking Class
 		WebElement Booking = driver
@@ -121,8 +125,7 @@ public class ValidFlightReservationTest extends BaseClass {
 		WebElement fileInput = driver.findElement(By.xpath("//input[@id='formFile']"));
 		// fileInput.click();
 
-		// Specify the file path
-		// String filePath = "C:\\Users\\shankar\\Desktop";
+		// Specify the file path// String filePath = "C:\\Users\\shankar\\Desktop";
 		String filePath = System.getProperty("user.dir") + "//excel//man-.jpg";
 		// Send the file path to the file input element
 		fileInput.sendKeys(filePath);
@@ -141,7 +144,8 @@ public class ValidFlightReservationTest extends BaseClass {
 		s.selectByVisibleText(Currency);
 		
 		screenshot("Flight Details Page");
-		System.out.println("---------------Flight Details Entered---------------------");
+        log.info("Flight details entered successfully.");
+		//System.out.println("---------------Flight Details Entered---------------------");
 		Thread.sleep(3000);
 
 		// Submit Button
@@ -151,17 +155,25 @@ public class ValidFlightReservationTest extends BaseClass {
 		js.executeScript("arguments[0].click();", Submitbutton);
 		Thread.sleep(3000);
 		// Submitbutton.click();
-
-		System.out.println("---------------Flight Details Submitted Suceess------------------");
+        log.info("Flight booking verification successful.");
+		//System.out.println("---------------Flight Details Submitted Suceess------------------");
 	}
 	// ====================================================================
 	@Test(priority = 2)
 	public void bookingVerification() throws Exception {
+		
+		String actualPageTitle= driver.getTitle();
+		String expectedPageTitle="Flight Booking Form";
+		Assert.assertEquals(actualPageTitle, expectedPageTitle, "User is not redirected to the Confirmation page");
+		
+		
 		//customer name & Welcome Message
+		wait =new WebDriverWait(driver, Duration.ofSeconds(10));
 		WebElement welcomeMessage = driver.findElement(By.xpath("//p[@class='textmessage'][1]"));
+		wait.until(ExpectedConditions.visibilityOf(welcomeMessage));
 		String welcomeMessageText = welcomeMessage.getText();
 		Assert.assertTrue(welcomeMessage.isDisplayed());
-		//System.out.println("Welcome Message: " + welcomeMessageText);
+		log.info("Confirmation Message: " + welcomeMessageText);
 
 		// Split the welcome message using ","
 		String[] part = welcomeMessageText.split(",");
@@ -177,18 +189,7 @@ public class ValidFlightReservationTest extends BaseClass {
 
 		sa = new SoftAssert();
 		sa.assertEquals(firstnametext, firstNameValue, "First name doesn't match");
-		// try {
-		// // Assert the first name
-		// Assert.assertEquals(firstnametext, firstNameValue, "First name doesn't
-		// match");
-		//
-		// } catch (AssertionError e1) {
-		// // Assertion error occurred
-		// System.out.println("Assertion Error: " + e1.getMessage());
-		// // You can handle the assertion error here, such as logging, taking
-		// screenshots,
-		// // etc.
-		// }
+		
 		try {
 
 			// Assert the last name
@@ -196,9 +197,8 @@ public class ValidFlightReservationTest extends BaseClass {
 
 		} catch (AssertionError e2) {
 			// Assertion error occurred
-			System.out.println("Assertion Error: " + e2.getMessage());
-			// You can handle the assertion error here, such as logging, taking screenshots,
-			// etc.
+			log.info("Assertion Error: " + e2.getMessage());
+			// assertion error here, such as logging, taking screenshots
 		}
 		//verify sucees booking message
 		Assert.assertEquals(welcome, expectedMessage, "Flight Booking is Not Shown");
@@ -240,9 +240,9 @@ public class ValidFlightReservationTest extends BaseClass {
 			// returnDates.contentEquals(expectedReturnDate) &&
 			if (departureCountry.equals(expectedDepartureCountry)
 					&& destinationCountry.equals(expectedDestinationCountry)) {
-				System.out.println("Flight DATE & COUNTRY verification passed for row " + i);
+				log.info("Flight DATE & COUNTRY verification passed for row " + i);
 			} else {
-				System.out.println("Flight DATE & COUNTRY verification failed for row " + i);
+				log.info("Flight DATE & COUNTRY verification failed for row " + i);
 			}
 		}
 		// =========================================
@@ -282,9 +282,9 @@ public class ValidFlightReservationTest extends BaseClass {
 			// Verify data
 			if (departureCity.equals(expectedDepartureCity) && destinationCity.equals(expectedDestinationCity)
 					&& bookingClass.equals(expectedBookingClass) && ticketTypes.equals(expectedTicketType)) {
-				System.out.println("Flight CITY & BOOKING CLASS verification passed for row " + j);
+				log.info("Flight CITY & BOOKING CLASS verification passed for row " + j);
 			} else {
-				System.out.println("Flight CITY & BOOKING CLASS verification failed for row " + j);
+				log.info("Flight CITY & BOOKING CLASS verification failed for row " + j);
 			}
 		}
 
@@ -308,8 +308,9 @@ public class ValidFlightReservationTest extends BaseClass {
 		// Assert.assertEquals(label, expectedLabel, "Label assertion failed");
 		Assert.assertEquals(amountelement, Amount.replaceAll("\\s+", ""), "Amount assertion failed");
 		Assert.assertEquals(currencyelement, Currency, "Currency assertion failed");
-		System.out.println("-------Flight Ticket Booking is Sucessfull----------------");
-		System.out.println("-------Following Failures are Expected As I have Found Bug in the Application------------------ ");
+		log.info("Flight Ticket Booking is Successful");
+        log.info("Following Failures are Expected As I have Found Bug in the Application");
+
 		// After all assertions, call assertAll() to verify all assertions
 		sa.assertAll();
 	}
@@ -333,7 +334,7 @@ public class ValidFlightReservationTest extends BaseClass {
         try {
             // Use FileUtils.copyFile method to save the screenshot at the desired location
             FileUtils.copyFile(source, destination);
-            System.out.println("Screenshot captured: " + scrrenshotName);
+            log.info("Screenshot captured: " + scrrenshotName);
         } catch (IOException e) {
             e.printStackTrace();
         }

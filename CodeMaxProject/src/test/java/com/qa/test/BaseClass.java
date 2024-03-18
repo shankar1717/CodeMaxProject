@@ -3,8 +3,10 @@ package com.qa.test;
 import java.io.IOException;
 import java.time.Duration;
 import java.util.ArrayList;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
@@ -16,7 +18,9 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class BaseClass {
 	public WebDriver driver;
 	public WebDriverWait wait;
+	public static Logger log;
 	public Select s;
+	//Common c;
 	// ---------Data From Excel Sheet Personal Details---------------
 	public String salutationValue;
 	public String firstNameValue;
@@ -42,11 +46,14 @@ public class BaseClass {
 
 	@BeforeClass
 	public void setUp() throws IOException {
+		// Set up logger
+		log = Logger.getLogger(getClass());
+		PropertyConfigurator.configure("src/test/resources/log4j.properties");
+		//public static Logger log = Logger.getLogger(ValidFlightReservationTest.class);
 
 		// Use WebDriverManager to setup chromedriver
 		WebDriverManager.chromedriver().setup();
-		WebDriverManager.edgedriver().setup();
-		driver = new EdgeDriver();
+		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://flight-reservation.cx24.net");
 		wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -72,8 +79,8 @@ public class BaseClass {
 
 	@AfterClass
 	public void tearDown() {
-//		if (driver != null) {
-//			driver.quit();
-//		}
+//				if (driver != null) {
+//					driver.quit();
+//				}
 	}
 }

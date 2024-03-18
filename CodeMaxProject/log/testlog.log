@@ -1,0 +1,168 @@
+2024-03-17 16:23:52,856 - com.qa.test.TestLogger -INFO - Logged into Myntra
+2024-03-17 16:23:52,910 - com.qa.test.TestLogger -INFO - true
+2024-03-17 16:23:53,267 - com.qa.test.TestLogger -INFO - Quitting the driver
+2024-03-17 16:29:22,070 - com.qa.test.ValidFlightReservationTest -INFO - ---------------Personal Details Entered-------------------
+2024-03-17 16:29:23,495 - com.qa.test.ValidFlightReservationTest -INFO - ---------------Flight Details Entered-------------------
+2024-03-17 16:50:48,624 - com.qa.test.ValidFlightReservationTest -INFO - Personal details entered successfully.
+2024-03-17 16:50:50,203 - com.qa.test.ValidFlightReservationTest -INFO - Flight details entered successfully.
+2024-03-17 16:50:56,381 - com.qa.test.ValidFlightReservationTest -INFO - Flight booking verification successful.
+2024-03-17 16:52:15,719 - com.qa.test.TestLogger -INFO - Logged into Myntra
+2024-03-17 16:52:15,778 - com.qa.test.TestLogger -INFO - true
+2024-03-17 16:52:16,036 - com.qa.test.TestLogger -INFO - Quitting the driver
+2024-03-17 16:54:18,533 - com.qa.test.EmptyFieldsTest -INFO - Error Message : Return Date is required
+2024-03-17 16:54:18,616 - com.qa.test.EmptyFieldsTest -INFO - Error Message : Please enter Departure City
+2024-03-17 16:54:49,520 - com.qa.test.ValidFlightReservationTest -INFO - Personal details entered successfully.
+2024-03-17 16:54:51,281 - com.qa.test.ValidFlightReservationTest -INFO - Flight details entered successfully.
+2024-03-17 16:54:57,539 - com.qa.test.ValidFlightReservationTest -INFO - Flight booking verification successful.
+2024-03-17 17:06:46,343 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-17 17:06:47,990 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-17 17:06:51,118 - com.qa.test.ValidFlightReservationTest -INFO - Personal details entered successfully.
+2024-03-17 17:06:52,479 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Flight Details Page
+2024-03-17 17:06:52,480 - com.qa.test.ValidFlightReservationTest -INFO - Flight details entered successfully.
+2024-03-17 17:06:58,553 - com.qa.test.ValidFlightReservationTest -INFO - Flight booking verification successful.
+2024-03-17 17:06:58,698 - com.qa.test.ValidFlightReservationTest -INFO - Assertion Error: Last name doesn't match expected [A] but found [Rebello]
+2024-03-17 17:06:58,793 - com.qa.test.ValidFlightReservationTest -INFO - Flight DATE & COUNTRY verification passed for row 1
+2024-03-17 17:06:58,875 - com.qa.test.ValidFlightReservationTest -INFO - Flight CITY & BOOKING CLASS verification passed for row 1
+2024-03-17 17:06:59,364 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Confirmation Page
+2024-03-17 17:06:59,365 - com.qa.test.ValidFlightReservationTest -INFO - Flight Ticket Booking is Successful
+2024-03-17 17:06:59,366 - com.qa.test.ValidFlightReservationTest -INFO - Following Failures are Expected As I have Found Bug in the Application
+2024-03-17 17:27:32,911 - com.qa.test.EmptyFieldsTest -INFO - Error Message : Return Date is required
+2024-03-17 17:27:32,980 - com.qa.test.EmptyFieldsTest -INFO - ---------------------------------------------
+2024-03-17 17:27:32,998 - com.qa.test.EmptyFieldsTest -INFO - Error Message : Please enter Departure City
+2024-03-17 17:27:33,023 - com.qa.test.EmptyFieldsTest -INFO - ---------------------------------------------
+2024-03-17 17:27:33,523 - com.qa.test.EmptyFieldsTest -INFO - Screenshot captured: EmptyFields-ErrorMeaage
+2024-03-17 17:29:19,140 - com.qa.test.EmptyFieldsTest -ERROR - Error Message : Return Date is required
+2024-03-17 17:29:19,216 - com.qa.test.EmptyFieldsTest -INFO - ---------------------------------------------
+2024-03-17 17:29:19,230 - com.qa.test.EmptyFieldsTest -ERROR - Error Message : Please enter Departure City
+2024-03-17 17:29:19,261 - com.qa.test.EmptyFieldsTest -INFO - ---------------------------------------------
+2024-03-17 17:29:19,796 - com.qa.test.EmptyFieldsTest -INFO - Screenshot captured: EmptyFields-ErrorMeaage
+2024-03-17 17:44:48,229 - com.qa.test.EmptyPaymentTest -INFO - Error Message: This field is required.
+2024-03-17 17:44:48,288 - com.qa.test.EmptyPaymentTest -INFO - ---------------------------------------------
+2024-03-17 17:44:48,867 - com.qa.test.EmptyPaymentTest -INFO - Screenshot captured: EmptyPayment-ErrorMeaage
+2024-03-17 17:47:49,902 - com.qa.test.EmptyFieldsTest -ERROR - Error Message : Return Date is required
+2024-03-17 17:47:49,967 - com.qa.test.EmptyFieldsTest -INFO - ---------------------------------------------
+2024-03-17 17:47:49,989 - com.qa.test.EmptyFieldsTest -ERROR - Error Message : Please enter Departure City
+2024-03-17 17:47:50,012 - com.qa.test.EmptyFieldsTest -INFO - ---------------------------------------------
+2024-03-17 17:47:50,647 - com.qa.test.EmptyFieldsTest -INFO - Screenshot captured: EmptyFields-ErrorMeaage
+2024-03-17 18:15:26,933 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-17 18:15:28,754 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-17 18:15:31,871 - com.qa.test.ValidFlightReservationTest -INFO - Personal details entered successfully.
+2024-03-17 18:15:33,118 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Flight Details Page
+2024-03-17 18:15:33,120 - com.qa.test.ValidFlightReservationTest -INFO - Flight details entered successfully.
+2024-03-17 18:15:39,243 - com.qa.test.ValidFlightReservationTest -INFO - Flight booking verification successful.
+2024-03-17 18:15:39,333 - com.qa.test.ValidFlightReservationTest -INFO - Welcome Message: Dear Dolly Rebello, Your flight are reserved succesfully.
+2024-03-17 18:15:39,342 - com.qa.test.ValidFlightReservationTest -INFO - Assertion Error: Last name doesn't match expected [A] but found [Rebello]
+2024-03-17 18:15:39,389 - com.qa.test.ValidFlightReservationTest -INFO - Flight DATE & COUNTRY verification passed for row 1
+2024-03-17 18:15:39,440 - com.qa.test.ValidFlightReservationTest -INFO - Flight CITY & BOOKING CLASS verification passed for row 1
+2024-03-17 18:15:39,838 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Confirmation Page
+2024-03-17 18:15:39,838 - com.qa.test.ValidFlightReservationTest -INFO - Flight Ticket Booking is Successful
+2024-03-17 18:15:39,838 - com.qa.test.ValidFlightReservationTest -INFO - Following Failures are Expected As I have Found Bug in the Application
+2024-03-17 18:24:56,208 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-17 18:24:58,295 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-17 18:25:01,415 - com.qa.test.ValidFlightReservationTest -INFO - Personal details entered successfully.
+2024-03-17 18:25:02,593 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Flight Details Page
+2024-03-17 18:25:02,594 - com.qa.test.ValidFlightReservationTest -INFO - Flight details entered successfully.
+2024-03-17 18:25:08,722 - com.qa.test.ValidFlightReservationTest -INFO - Flight booking verification successful.
+2024-03-17 18:25:08,754 - com.qa.test.ValidFlightReservationTest -INFO - pageTitle:Flight Booking Form
+2024-03-17 18:25:08,810 - com.qa.test.ValidFlightReservationTest -INFO - Welcome Message: Dear Dolly Rebello, Your flight are reserved succesfully.
+2024-03-17 18:25:08,819 - com.qa.test.ValidFlightReservationTest -INFO - Assertion Error: Last name doesn't match expected [A] but found [Rebello]
+2024-03-17 18:25:08,868 - com.qa.test.ValidFlightReservationTest -INFO - Flight DATE & COUNTRY verification passed for row 1
+2024-03-17 18:25:08,927 - com.qa.test.ValidFlightReservationTest -INFO - Flight CITY & BOOKING CLASS verification passed for row 1
+2024-03-17 18:25:09,350 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Confirmation Page
+2024-03-17 18:25:09,351 - com.qa.test.ValidFlightReservationTest -INFO - Flight Ticket Booking is Successful
+2024-03-17 18:25:09,352 - com.qa.test.ValidFlightReservationTest -INFO - Following Failures are Expected As I have Found Bug in the Application
+2024-03-17 18:28:17,396 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-17 18:28:19,029 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-17 18:28:22,142 - com.qa.test.ValidFlightReservationTest -INFO - Personal details entered successfully.
+2024-03-17 18:28:22,168 - com.qa.test.ValidFlightReservationTest -INFO - pageTitle:Flight Booking Form
+2024-03-17 18:28:23,324 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Flight Details Page
+2024-03-17 18:28:23,324 - com.qa.test.ValidFlightReservationTest -INFO - Flight details entered successfully.
+2024-03-17 18:28:29,407 - com.qa.test.ValidFlightReservationTest -INFO - Flight booking verification successful.
+2024-03-17 18:28:29,435 - com.qa.test.ValidFlightReservationTest -INFO - pageTitle:Flight Booking Form
+2024-03-17 18:28:29,498 - com.qa.test.ValidFlightReservationTest -INFO - Welcome Message: Dear Dolly Rebello, Your flight are reserved succesfully.
+2024-03-17 18:28:29,506 - com.qa.test.ValidFlightReservationTest -INFO - Assertion Error: Last name doesn't match expected [A] but found [Rebello]
+2024-03-17 18:28:29,551 - com.qa.test.ValidFlightReservationTest -INFO - Flight DATE & COUNTRY verification passed for row 1
+2024-03-17 18:28:29,600 - com.qa.test.ValidFlightReservationTest -INFO - Flight CITY & BOOKING CLASS verification passed for row 1
+2024-03-17 18:28:30,006 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Confirmation Page
+2024-03-17 18:28:30,006 - com.qa.test.ValidFlightReservationTest -INFO - Flight Ticket Booking is Successful
+2024-03-17 18:28:30,006 - com.qa.test.ValidFlightReservationTest -INFO - Following Failures are Expected As I have Found Bug in the Application
+2024-03-17 18:35:25,773 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-17 18:35:27,494 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-17 18:35:30,608 - com.qa.test.ValidFlightReservationTest -INFO - Personal details entered successfully.
+2024-03-17 18:35:30,621 - com.qa.test.ValidFlightReservationTest -INFO - User Navigates to Flight Details Page
+2024-03-17 18:35:31,808 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Flight Details Page
+2024-03-17 18:35:31,809 - com.qa.test.ValidFlightReservationTest -INFO - Flight details entered successfully.
+2024-03-17 18:35:37,914 - com.qa.test.ValidFlightReservationTest -INFO - Flight booking verification successful.
+2024-03-17 18:35:38,006 - com.qa.test.ValidFlightReservationTest -INFO - Welcome Message: Dear Dolly Rebello, Your flight are reserved succesfully.
+2024-03-17 18:35:38,013 - com.qa.test.ValidFlightReservationTest -INFO - Assertion Error: Last name doesn't match expected [A] but found [Rebello]
+2024-03-17 18:35:38,073 - com.qa.test.ValidFlightReservationTest -INFO - Flight DATE & COUNTRY verification passed for row 1
+2024-03-17 18:35:38,141 - com.qa.test.ValidFlightReservationTest -INFO - Flight CITY & BOOKING CLASS verification passed for row 1
+2024-03-17 18:35:38,556 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Confirmation Page
+2024-03-17 18:35:38,556 - com.qa.test.ValidFlightReservationTest -INFO - Flight Ticket Booking is Successful
+2024-03-17 18:35:38,556 - com.qa.test.ValidFlightReservationTest -INFO - Following Failures are Expected As I have Found Bug in the Application
+2024-03-17 18:50:27,311 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-17 18:50:29,213 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-17 18:50:29,252 - com.qa.test.ValidFlightReservationTest -INFO - User Navigates to Flight Details Page
+2024-03-17 18:54:04,623 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-17 18:54:06,340 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-17 18:54:06,372 - com.qa.test.ValidFlightReservationTest -INFO - User Navigates to Flight Details Page
+2024-03-17 18:55:40,212 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-17 18:55:41,970 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-17 18:55:42,005 - com.qa.test.ValidFlightReservationTest -INFO - User Navigates to Flight Details Page
+2024-03-17 18:56:29,119 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-17 18:56:30,989 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-17 18:56:34,033 - com.qa.test.ValidFlightReservationTest -INFO - User Navigates to Flight Details Page
+2024-03-17 18:57:04,127 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-17 18:57:05,846 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-17 18:57:08,944 - com.qa.test.ValidFlightReservationTest -INFO - Personal details entered successfully.
+2024-03-17 18:57:08,956 - com.qa.test.ValidFlightReservationTest -INFO - User Navigates to Flight Details Page
+2024-03-17 18:57:10,184 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Flight Details Page
+2024-03-17 18:57:10,185 - com.qa.test.ValidFlightReservationTest -INFO - Flight details entered successfully.
+2024-03-17 18:57:16,289 - com.qa.test.ValidFlightReservationTest -INFO - Flight booking verification successful.
+2024-03-17 19:01:01,646 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-17 19:01:03,313 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-17 19:01:06,410 - com.qa.test.ValidFlightReservationTest -INFO - Personal details entered successfully.
+2024-03-17 19:01:06,422 - com.qa.test.ValidFlightReservationTest -INFO - User Navigates to Flight Details Page
+2024-03-17 19:01:07,594 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Flight Details Page
+2024-03-17 19:01:07,594 - com.qa.test.ValidFlightReservationTest -INFO - Flight details entered successfully.
+2024-03-17 19:01:13,702 - com.qa.test.ValidFlightReservationTest -INFO - Flight booking verification successful.
+2024-03-17 19:05:00,886 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-17 19:05:02,701 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-17 19:05:05,797 - com.qa.test.ValidFlightReservationTest -INFO - Personal details entered successfully.
+2024-03-17 19:05:05,810 - com.qa.test.ValidFlightReservationTest -INFO - User Navigates to Flight Details Page
+2024-03-17 19:05:06,984 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Flight Details Page
+2024-03-17 19:05:06,985 - com.qa.test.ValidFlightReservationTest -INFO - Flight details entered successfully.
+2024-03-17 19:05:13,125 - com.qa.test.ValidFlightReservationTest -INFO - Flight booking verification successful.
+2024-03-17 19:08:05,603 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-17 19:08:07,303 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-17 19:08:10,412 - com.qa.test.ValidFlightReservationTest -INFO - Personal details entered successfully.
+2024-03-17 19:08:10,423 - com.qa.test.ValidFlightReservationTest -INFO - User Navigates to Flight Details Page
+2024-03-17 19:08:11,617 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Flight Details Page
+2024-03-17 19:08:11,618 - com.qa.test.ValidFlightReservationTest -INFO - Flight details entered successfully.
+2024-03-17 19:08:17,719 - com.qa.test.ValidFlightReservationTest -INFO - Flight booking verification successful.
+2024-03-17 19:08:17,815 - com.qa.test.ValidFlightReservationTest -INFO - Confirmation Message: Dear Dolly Rebello, Your flight are reserved succesfully.
+2024-03-17 19:08:17,821 - com.qa.test.ValidFlightReservationTest -INFO - Assertion Error: Last name doesn't match expected [A] but found [Rebello]
+2024-03-17 19:08:17,862 - com.qa.test.ValidFlightReservationTest -INFO - Flight DATE & COUNTRY verification passed for row 1
+2024-03-17 19:08:17,912 - com.qa.test.ValidFlightReservationTest -INFO - Flight CITY & BOOKING CLASS verification passed for row 1
+2024-03-17 19:08:18,332 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Confirmation Page
+2024-03-17 19:08:18,333 - com.qa.test.ValidFlightReservationTest -INFO - Flight Ticket Booking is Successful
+2024-03-17 19:08:18,333 - com.qa.test.ValidFlightReservationTest -INFO - Following Failures are Expected As I have Found Bug in the Application
+2024-03-18 09:18:52,734 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-18 09:18:52,818 - com.qa.test.ValidFlightReservationTest -INFO - User Navigates to Flight Details Page
+2024-03-18 09:25:58,461 - com.qa.test.EmptyPaymentTest -INFO - Error Message: This field is required.
+2024-03-18 09:25:58,516 - com.qa.test.EmptyPaymentTest -INFO - ---------------------------------------------
+2024-03-18 09:25:59,168 - com.qa.test.EmptyPaymentTest -INFO - Screenshot captured: EmptyPayment-ErrorMeaage
+2024-03-18 09:26:21,495 - com.qa.test.ValidFlightReservationTest -INFO - Website Launched
+2024-03-18 09:26:23,194 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Personal Details Page
+2024-03-18 09:26:26,298 - com.qa.test.ValidFlightReservationTest -INFO - Personal details entered successfully.
+2024-03-18 09:26:26,315 - com.qa.test.ValidFlightReservationTest -INFO - User Navigates to Flight Details Page
+2024-03-18 09:26:27,499 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Flight Details Page
+2024-03-18 09:26:27,500 - com.qa.test.ValidFlightReservationTest -INFO - Flight details entered successfully.
+2024-03-18 09:26:33,614 - com.qa.test.ValidFlightReservationTest -INFO - Flight booking verification successful.
+2024-03-18 09:26:33,698 - com.qa.test.ValidFlightReservationTest -INFO - Confirmation Message: Dear Dolly Rebello, Your flight are reserved succesfully.
+2024-03-18 09:26:33,705 - com.qa.test.ValidFlightReservationTest -INFO - Assertion Error: Last name doesn't match expected [A] but found [Rebello]
+2024-03-18 09:26:33,760 - com.qa.test.ValidFlightReservationTest -INFO - Flight DATE & COUNTRY verification passed for row 1
+2024-03-18 09:26:33,822 - com.qa.test.ValidFlightReservationTest -INFO - Flight CITY & BOOKING CLASS verification passed for row 1
+2024-03-18 09:26:34,253 - com.qa.test.ValidFlightReservationTest -INFO - Screenshot captured: Confirmation Page
+2024-03-18 09:26:34,253 - com.qa.test.ValidFlightReservationTest -INFO - Flight Ticket Booking is Successful
+2024-03-18 09:26:34,254 - com.qa.test.ValidFlightReservationTest -INFO - Following Failures are Expected As I have Found Bug in the Application

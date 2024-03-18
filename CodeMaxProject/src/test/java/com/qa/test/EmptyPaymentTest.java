@@ -150,9 +150,9 @@ public class EmptyPaymentTest extends BaseClass {
 		System.out.println("---------------------------------------------");
 		List<WebElement> errorMessage1 = driver.findElements(By.xpath("//label[@class='error']"));
 		for (WebElement errorelement : errorMessage1) {
-			System.out.println("Error Message: " + errorelement.getText());
-			Assert.assertTrue(errorelement.isDisplayed(), "Error message not displayed for empty Fields");
-			System.out.println("---------------------------------------------");
+			log.info("Error Message: " + errorelement.getText());
+			Assert.assertTrue(errorelement.isDisplayed(), "Validation error message not found for empty payment");
+			log.info("---------------------------------------------");
 
 		}
 		screenshot("EmptyPayment-ErrorMeaage");
@@ -177,7 +177,7 @@ public class EmptyPaymentTest extends BaseClass {
 		try {
 			// Use FileUtils.copyFile method to save the screenshot at the desired location
 			FileUtils.copyFile(source, destination);
-			System.out.println("Screenshot captured: " + scrrenshotName);
+			log.info("Screenshot captured: " + scrrenshotName);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
